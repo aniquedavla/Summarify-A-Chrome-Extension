@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+
+	"name":"Summarify",
+	"description":"Summaries contents of a newspaper article.",
+	"version": "1.0",
+	"permissions": [
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  
+	"browser_action": {
+		"default_icon": "summarifyIcon.png",
+		"default_popup": "summarify.html"
+	}
+}
