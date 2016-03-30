@@ -5,13 +5,17 @@
 	"description":"Summaries contents of a newspaper article.",
 	"version": "1.0",
 	"permissions": [
-    "cookies",
-    "http://*/*",
-    "https://*/*"
-  ],
-  
+	"cookies",
+	"http://*/*",
+	"https://*/*"
+	],
+	
 	"browser_action": {
 		"default_icon": "summarifyIcon.png",
 		"default_popup": "summarify.html"
-	}
+	},
+	"content_scripts": [ {
+      "js": ["jquery-1.12.2.min.js","summarify.js" ],
+      "matches": [ "http://*/*", "https://*/*"]
+      }]
 }
