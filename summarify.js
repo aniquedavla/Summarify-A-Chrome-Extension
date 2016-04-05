@@ -1,27 +1,40 @@
 
 $(function() {
-	var $addSummary = $('#summary');
-	var $senten = $('#numberofSentences');
+	//var $addSummary = $('#summary');
+	// var $senten = $('#numberofSentences');
 	var $urlT = $('#feed_url');
-	$('#data').submit(function() {
-		var requestSummary = {
-			"X-Mashape-Key":"CGp60L3DxfmshySTedqMew6HxqXpp1RW8nHjsnLrto8lHz6WK3",
-			"Content-Type": "application/x-www-form-urlencoded",
-			"Accept": "application/json",
-			"sentnum": $senten.val(),
-			"url": $urlT.val(),
-		}
+	$("#data").submit(function(event) {
+		console.log($urlT.val())
 		$.ajax({
-			type : 'POST',
-			url : 'https://textanalysis-text-summarization.p.mashape.com/text-summarizer-url',
-			data : requestSummary,
-			success:function(newSummary) {
-				$addSummary.append('Summary:'+newSummary.sentences[0])
+			url: "https://api-2445581399224.apicast.io/api/v1/summarize?",
+			type:"GET",
+			data: {"sourceURL":"http://www.bbc.com/news/world-asia-35940067","user_key":"32c37493e717e97d75b64d2a8145bdbb"},
+			success: function(data){
+				$.each(data, function(i, val) {
+					$('#summary').append(val);
+				});
+
 			},
-			error:function(){
-				alert("NOT Summarizing, check the url or the internet!")
+			error: function(jqXHR, textStatus, errorThrown){
+				console.log(errorThrown);
 			}
-		}); 
-	});
-	
+			event.preventDefault();
+		});
+
+
+	// 	$.ajax({
+	// 		type : 'GET',
+	// 		url : 'https://api-2445581399224.apicast.io/api/v1/summarize?',
+	// 		data : requestSummary,
+	// 		success:function(newSentences) {
+	// 			console.log(newSentences);
+	// 			// $addSummary.append('Summary:'+ newSentence.summary);
+	// 		},
+	// 		error:function(){
+	// 			alert("NOT Summarizing, check the url or the internet!")
+	// 		}
+	// 	}); 
+
+});
+
 });

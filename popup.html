@@ -1,0 +1,34 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+	<meta name="twitter:widgets:csp" content="on">
+    <title>Senti Sum - Smartest Summarizer</title>
+
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+	<div>
+	<base target="_blank" />
+<!-- 	<a href="http://192.168.0.22:8080/ask-senti/summary/AUytPLpddeR1CH2l6DMP">summary</a></div> -->
+    <div id="status"></div>    
+	<div id="fb-root"></div>
+    <div id="resultsBlock">
+    
+    </div>
+  
+</html>

@@ -2,20 +2,24 @@
 <html>
 <head>
 	<title id="title">Summarify</title>
-	<script type="text/javascript" src="jquery-1.12.2.min.js"></script>
-	<script type="text/javascript" src="summarify.js"></script>
-	<script type="text/javascript" src="submit.js"></script>
+<!-- 	<script type="text/javascript" src="jquery-1.12.2.min.js"></script>
+-->
+<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
 
-	<style type="text/css" scr="style.css"></style>
+<script type="text/javascript" src="summarify.js"></script>
+
+<style type="text/css" scr="style.css"></style>
 
 </head>
 <body>
 	<h2>Summarify</h2>
-	<form id="data" name="data" method="POST" action="" accept-charset="utf-8">
-		<input id="feed_url" type="text" style="width: 99%" name="feed_url" value="Enter url here">
-		<input id="numberofSentences" type="number" max="10" min="0">
-		<input id="submitButton" type="submit" value="Summarize now">
-	</form>
-	<div id="summary">X</div>
+	<form id="data" method="POST" action="" accept-charset="utf-8">
+		<input id="feed_url" type="text" style="width: 99%" value="">
+<!-- 		<input id="numberofSentences" name="numberofSentences" type="number" max="10" min="0">
+-->		<input id="button" type="submit" value="Summarize now">
+</form>
+<div id="summary">...</div>
+<div id="status"></div>    
+
 </body>
 </html>
