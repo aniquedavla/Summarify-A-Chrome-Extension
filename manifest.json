@@ -11,7 +11,7 @@
 	],
 	
 	"browser_action": {
-		"default_icon": "summary.png",
+		"default_icon": "summarifyIcon.png",
 		"default_popup": "summarify.html"
 		},
 		"content_scripts": [ {
