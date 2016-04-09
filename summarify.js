@@ -15,7 +15,7 @@ $.ajax({
 			//all summary appened to a div from json element
 			success: function(data){
 				console.log(data);
-				$('#summary').append(data.summary);
+				$('#summary').append("Summary: "+data.summary);
 				
 
 				// $.each(data, function(i, val) {
